@@ -1,7 +1,7 @@
 <?php namespace JasonLewis\EnhancedRouter;
 
 use Closure;
-use Symfony\Component\HttpFoundation\Request;
+use Illuminate\Http\Request;
 use Symfony\Component\Routing\RouteCollection;
 use Illuminate\Routing\Router as IlluminateRouter;
 
