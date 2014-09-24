@@ -1,6 +1,6 @@
 <?php namespace JasonLewis\EnhancedRouter;
 
-use Symfony\Component\Routing\RouteCollection;
+use Illuminate\Routing\RouteCollection;
 
 class RouteGroup {
 
@@ -35,7 +35,7 @@ class RouteGroup {
 	/**
 	 * Create a new route group instance.
 	 * 
-	 * @param  \Symfony\Component\Routing\RouteCollection  $routes
+	 * @param  \Illuminate\Routing\RouteCollection  $routes
 	 * @param  array  $groupDepth
 	 * @return void
 	 */
