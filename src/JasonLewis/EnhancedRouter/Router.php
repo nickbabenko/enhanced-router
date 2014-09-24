@@ -157,13 +157,12 @@ class Router extends IlluminateRouter {
 	/**
 	 * Find the patterned filters matching a request.
 	 * 
-	 * @param  string  $method
-	 * @param  string  $path
+	 * @param  \Illuminate\Http\Request  $request
 	 * @return array
 	 */
-	public function findPatternFilters($method, $path)
+	public function findPatternFilters($request)
 	{
-		$filters = parent::findPatternFilters($method, $path);
+		$filters = parent::findPatternFilters($request);
 
 		foreach ($this->httpVerbFilters as $verb => $values)
 		{
