@@ -1,6 +1,7 @@
 <?php namespace JasonLewis\EnhancedRouter;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Events\Dispatcher;
 
 class EnhancedRouterServiceProvider extends ServiceProvider {
 
@@ -20,7 +21,8 @@ class EnhancedRouterServiceProvider extends ServiceProvider {
 	{
 		$this->app['router'] = $this->app->share(function($app)
 		{
-			$router = new Router($app, $app->events);
+			$eventDispatcher = new Dispatcher($app);
+			$router = new Router($eventDispatcher, $app);
 
 			// If the current application environment is "testing", we will disable the
 			// routing filters, since they can be tested independently of the routes
