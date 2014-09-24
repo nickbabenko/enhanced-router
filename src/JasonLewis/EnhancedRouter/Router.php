@@ -97,7 +97,7 @@ class Router extends IlluminateRouter {
 	 */
 	protected function mergeRouteGroups()
 	{
-		$routes = $this->routes->all();
+		$routes = $this->routes->getRoutes();
 
 		foreach ($this->routeGroups as $key => $group)
 		{
