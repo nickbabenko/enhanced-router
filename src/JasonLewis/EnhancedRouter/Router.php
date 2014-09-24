@@ -2,7 +2,7 @@
 
 use Closure;
 use Illuminate\Http\Request;
-use Symfony\Component\Routing\RouteCollection;
+use Illuminate\Routing\RouteCollection;
 use Illuminate\Routing\Router as IlluminateRouter;
 
 class Router extends IlluminateRouter {
