@@ -71,7 +71,7 @@ class Router extends IlluminateRouter {
 		// We can now get the routes that were added in this group by comparing the
 		// keys of the original routes and of the routes we have after the group
 		// callback was fired.
-		$routes = array_diff_key($this->routes->all(), $original->all());
+		$routes = array_diff_key($this->routes->getRoutes(), $original->getRoutes());
 
 		// With a brand new route collection we'll spin through all of the routes
 		// defined within our group and add them to the collection.
